@@ -104,15 +104,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Park Woo Young"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "곰순이의 블로그입니다"
-  location         : "South Korea"
-  # email            : ""
+  name             : "곰순이의 기술블로그"
+  avatar           : "/images/avatar.jpg"
+  bio              : "MS SNU expected in CEE 2023<br/>BS SSU in AE and CSE 2021"  
+  location         : "Seoul, South Korea"
+  email            : "uyoung@snu.ac.kr"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:uyoung@snu.ac.kr"
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: "mailto:uyoung@snu.ac.kr"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://sites.google.com/view/moonslab"
@@ -220,7 +220,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# timezone: "Asia/Seoul"
 
 
 # Plugins (previously gems:)
@@ -257,16 +257,16 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
