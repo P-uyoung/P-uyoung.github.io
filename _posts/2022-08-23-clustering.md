@@ -22,7 +22,7 @@ search: true
 
 
 
-<img src="../images/2022-08-23-clustering/projection.jpg" alt="projection" style="zoom: 50%;" />
+<img src="../assets/images/2022-08-23-clustering/projection.jpg" alt="projection" style="zoom: 50%;" />
 $$
 \vec{e}^*=arg max_\vec{e}Var(M\vec{e})
 $$
@@ -74,7 +74,7 @@ plt.scatter(x,y)
 plt.show()
 ```
 
-![image-20220823174936356](../images/2022-08-23-clustering/image-20220823174936356.png)
+![image-20220823174936356](../assets/images/2022-08-23-clustering/image-20220823174936356.png)
 
 ```python
 from sklearn.decomposition import PCA
@@ -113,7 +113,7 @@ plt.plot(evector_x, evector_y)
 plt.show()
 ```
 
-![image-20220823175153357](../images/2022-08-23-clustering/image-20220823175153357.png)
+![image-20220823175153357](../assets/images/2022-08-23-clustering/image-20220823175153357.png)
 
 
 
