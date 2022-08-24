@@ -20,6 +20,8 @@ use_math: true
 <br/>
 
 <img src="/assets/images/2022-08-23-clustering/projection.jpg" alt="projection.jpg" style="zoom: 50%;" />
+<br/>
+
 $$
 \vec{e}^*=arg max_{\vec{e}}Var(M\vec{e})
 $$
@@ -33,6 +35,8 @@ Projection 시, **데이터set인 M**을 가장 잘 설명하는 (데이터가 �
 <br/>
 
 **분산식은 *공분산 행렬 $\sum$*  로 나타낼 수 있으며, 분산식은 곧 *eigen value $\lambda$* 를 의미한다.**
+<br/>
+
 $$
 Var(M\vec{e})=\vec{e}^T \Sigma  \vec{e}=\lambda
 $$
