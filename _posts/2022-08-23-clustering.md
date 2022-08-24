@@ -6,54 +6,68 @@ tag: [python, jekyll]
 toc: true
 author_profile: false
 search: true
+use_math: true
 ---
-
-
-
-보통, k-means clustering 전에 노이즈 감소를 위해 PCA (principal component analysis)를 적용한다. 
-
+<br/>
  **So k-means can be seen as a super-sparse PCA.**
 
+보통, k-means clustering 전에 노이즈 감소를 위해 PCA (principal component analysis)를 적용한다. 
+<br/>
 
-
-## (1) Projection (투영) / PCA
-
+### (1) Projection / PCA
 #### -개념
 
+<br/>
 
 
 <img src="../assets/images/2022-08-23-clustering/projection.jpg" alt="projection" style="zoom: 50%;" />
+
 $$
-\vec{e}^*=arg max_\vec{e}Var(M\vec{e})
+\vec{e}^*=arg max_{\vec{e}}Var(M\vec{e})
 $$
+
+
 Projection 시, **데이터set인 M**을 가장 잘 설명하는 (데이터가 골고루 분산되도록 하는)  **vector(axis) e** 를 찾고자 한다.
 
 왜냐하면 데이터의 차원 축소 시 정보 손실을 최소화 하기 위해서이다.
 
 다시 말해, *Var(Me)* 분산식 을 최대로 하는 *eigen vector e* 를 찾고자 한다. 
-
-
+<br/>
 
 **분산식은 *공분산 행렬 $\sum$*  로 나타낼 수 있으며, 분산식은 곧 *eigen value $\lambda$* 를 의미한다.**
+
 $$
 Var(M\vec{e})=\vec{e}^T \Sigma  \vec{e}=\lambda
 $$
+
 이는 다음과 같은 풀이과정으로 도출된다.
+
 $$
-Var(M\vec{e})={\operatorname{1}\over\operatorname{N}}\sum_{i=1}^N(M\vec{e}-E(M\vec{e}))^2\\
-Var(M\vec{e})={\operatorname{1}\over\operatorname{N}}\sum_{i=1}^N(M\vec{e})^2 \quad   s.t. E(M\vec{e})=0\\
-Var(M\vec{e})={\operatorname{1}\over\operatorname{N}}\sum_{i=1}^N(M\vec{e})(M\vec{e})={\operatorname{1}\over\operatorname{N}}\sum_{i=1}^N(M\vec{e})(M\vec{e})  \quad  (Bassel's correction)\\
+Var(M\vec{e})={\operatorname{1}\over\operatorname{N}}\sum_{i=1}^N(M\vec{e}-E(M\vec{e}))^2
+$$
+
+$$
+Var(M\vec{e})={\operatorname{1}\over\operatorname{N}}\sum_{i=1}^N(M\vec{e})^2 \quad   s.t. E(M\vec{e})=0
+$$
+
+$$
+Var(M\vec{e})={\operatorname{1}\over\operatorname{N}}\sum_{i=1}^N(M\vec{e})(M\vec{e})={\operatorname{1}\over\operatorname{N}}\sum_{i=1}^N(M\vec{e})(M\vec{e})  \quad  (Bassel's correction)
+$$
+
+$$
 Var(M\vec{e})={\operatorname{1}\over\operatorname{N}}\vec{e}^TM^TM\vec{e}
 =\vec{e}^T{\operatorname{M^TM}\over\operatorname{N}}\vec{e}=\vec{e}^T\sum\vec{e}=\vec{e}^T\lambda\vec{e}=\lambda
 $$
 
+<br/>
+
 **Principal projection vector (axis) 는 eigenvector e 이다. 이때의 분산이 eigen-value $ \lambda\ $이며, 이는 데이터가 얼마나 spread 되어있는지를 의미한다.**
 
-
-
-
+<br/>
 
 #### -코드
+
+<br/>
 
 코드로 보면 다음과 같다.
 
@@ -121,9 +135,9 @@ plt.show()
 
 
 
-## (2) K-means clustering
+### (2) K-means clustering
 
-## (3) Relation between PCA and K-means
+### (3) Relation between PCA and K-means
 
 +50
 
@@ -139,7 +153,7 @@ The intuition is that PCA seeks to represent all nn data vectors as linear combi
 
 
 
-참조
+### REFERENCES
 
 <https://stats.stackexchange.com/questions/183236/what-is-the-relation-between-k-means-clustering-and-pca>
 
