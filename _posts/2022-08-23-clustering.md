@@ -19,9 +19,7 @@ use_math: true
 
 <br/>
 
-
-<img src="../assets/images/2022-08-23-clustering/projection.jpg" alt="projection" style="zoom: 50%;" />
-
+<img src="/assets/images/2022-08-23-clustering/projection.jpg" alt="projection.jpg" style="zoom: 50%;" />
 $$
 \vec{e}^*=arg max_{\vec{e}}Var(M\vec{e})
 $$
@@ -35,7 +33,6 @@ Projection 시, **데이터set인 M**을 가장 잘 설명하는 (데이터가 �
 <br/>
 
 **분산식은 *공분산 행렬 $\sum$*  로 나타낼 수 있으며, 분산식은 곧 *eigen value $\lambda$* 를 의미한다.**
-
 $$
 Var(M\vec{e})=\vec{e}^T \Sigma  \vec{e}=\lambda
 $$
@@ -88,7 +85,7 @@ plt.scatter(x,y)
 plt.show()
 ```
 
-![image-20220823174936356](../assets/images/2022-08-23-clustering/image-20220823174936356.png)
+<img src="/assets/images/2022-08-23-clustering/image-20220823174936356.png" alt="image-20220823174936356" style="zoom: 150%;" />
 
 ```python
 from sklearn.decomposition import PCA
@@ -126,8 +123,7 @@ plt.scatter(x,y)
 plt.plot(evector_x, evector_y)
 plt.show()
 ```
-
-![image-20220823175153357](../assets/images/2022-08-23-clustering/image-20220823175153357.png)
+<img src="/assets/images/2022-08-23-clustering/image-20220823175153357.png" alt="image-20220823175153357" style="zoom:150%;" />
 
 
 
