@@ -16,12 +16,8 @@ use_math: true
 
 ### (1) Projection / PCA
 #### -개념
-
-<br/>
-
 <img src="/assets/images/2022-08-23-clustering/projection.jpg" alt="projection.jpg" style="zoom: 50%;" />
 <br/>
-
 $$
 \vec{e}^*=arg max_{\vec{e}}Var(M\vec{e})
 $$
@@ -29,9 +25,9 @@ $$
 
 Projection 시, **데이터set인 M**을 가장 잘 설명하는 (데이터가 골고루 분산되도록 하는)  **vector(axis) e** 를 찾고자 한다.
 
-왜냐하면 데이터의 차원 축소 시 정보 손실을 최소화 하기 위해서이다.
+왜냐하면 데이터의 차원 축소 시 정보 손실을 최소화하기 위해서이다.
 
-다시 말해, *Var(Me)* 분산식 을 최대로 하는 *eigen vector e* 를 찾고자 한다. 
+다시 말해, *<U>Var(Me) 분산식</U>* 을 최대로 하는 *<U>eigen vector e</U>* 를 찾고자 한다. 
 <br/>
 
 **분산식은 *공분산 행렬 $\sum$*  로 나타낼 수 있으며, 분산식은 곧 *eigen value $\lambda$* 를 의미한다.**
@@ -68,8 +64,6 @@ $$
 
 #### -코드
 
-<br/>
-
 코드로 보면 다음과 같다.
 
 ```python
@@ -89,7 +83,7 @@ plt.scatter(x,y)
 plt.show()
 ```
 
-<img src="/assets/images/2022-08-23-clustering/image-20220823174936356.png" alt="image-20220823174936356" style="zoom: 150%;" />
+<img src="/assets/images/2022-08-23-clustering/image-20220823174936356.png" alt="image-20220823174936356" style="zoom: 100%;" />
 
 ```python
 from sklearn.decomposition import PCA
@@ -107,8 +101,6 @@ pca.components는 feature space 상에서, principal vectors를 의미한다.
 
 해당 component는 explain_variance에 의한 순서이다.
 
-<span style="color:green">음수에 대해서는 조금 더 생각해보기</span>
-
 ```python
 np.sqrt(pca.explained_variance_)
 
@@ -116,9 +108,9 @@ np.sqrt(pca.explained_variance_)
 ```
 
 ```python
-any_num = 3     # 대각선 길이
+any_num = 3     # (arbitrary) the length of line
 sigma3_evalue= any_num*np.sqrt(pca.explained_variance_[0])
-sigma3_evalue_arr= np.array([[-sigma3_evalue, sigma3_evalue]])
+sigma3_evalue_arr= np.array([[-sigma3_evalue, sigma3_evalue]]) # (arbitrary) for make diagonal line
 eigenvector = np.array([pca.components_[0]]).T
 evector_x, evector_y = np.dot(eigenvector, sigma3_evalue_arr)
 
@@ -127,15 +119,13 @@ plt.scatter(x,y)
 plt.plot(evector_x, evector_y)
 plt.show()
 ```
-<img src="/assets/images/2022-08-23-clustering/image-20220823175153357.png" alt="image-20220823175153357" style="zoom:150%;" />
-
-
-
-
+<img src="/assets/images/2022-08-23-clustering/image-20220823175153357.png" alt="image-20220823175153357" style="zoom:100%;" />
 
 
 
 ### (2) K-means clustering
+
+
 
 ### (3) Relation between PCA and K-means
 
