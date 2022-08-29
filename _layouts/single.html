@@ -50,15 +50,19 @@ layout: default
         {% endif %}
         {{ content }}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+        
+        <p></p>
+        <h4 class="page__meta-title"><span style="font-family:'$sans-serif'; color:rgb(22, 114, 201); font-size: 1.5em">{{ page.categories[0] }}  CATEGORY,</span> <span style="font-family:'$sans-serif'; font-size: 1.5em">  go to see other posts</span></h4>
+        {% include post_pagination.html %}
+        <p></p>
+      
       </section>
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
         {% endif %}
+        {% if page.share %}{% include social-share.html %}{% endif %}
       </footer>
-
-      {% if page.share %}{% include social-share.html %}{% endif %}
-      {% include post_pagination.html %}
     </div>
     {% if jekyll.environment == 'production' and site.comments.provider and page.comments %}
       {% include comments.html %}
