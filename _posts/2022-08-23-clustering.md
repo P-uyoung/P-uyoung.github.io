@@ -9,7 +9,10 @@ search: true
 use_math: true
 ---
 <br/>
- **So k-means can be seen as a super-sparse PCA.**
+
+### 결론 
+
+**So k-means can be seen as a super-sparse PCA.**
 
 보통, k-means clustering 전에 노이즈 감소를 위해 PCA (principal component analysis)를 적용한다. 
 <br/>
@@ -18,6 +21,7 @@ use_math: true
 #### -개념
 <img src="/assets/images/2022-08-23-clustering/projection.jpg" alt="projection.jpg" style="zoom: 50%;" />
 <br/>
+
 $$
 \vec{e}^*=arg max_{\vec{e}}Var(M\vec{e})
 $$
@@ -120,12 +124,19 @@ plt.plot(evector_x, evector_y)
 plt.show()
 ```
 <img src="/assets/images/2022-08-23-clustering/image-20220823175153357.png" alt="image-20220823175153357" style="zoom:100%;" />
-
-
+<br/>
 
 ### (2) K-means clustering
 
+****
 
+#### -군집 vs 분류
+
+분류는 supervised learning(지도학습)으로 label(y)값이 있지만, <br/>
+
+군집은 unsuperviesd learning(비지도 학습)으로 label이 사전에 알려져 있지 않을 때 사용하는 알고리즘이다. <br/>
+
+그렇다면 
 
 ### (3) Relation between PCA and K-means
 
