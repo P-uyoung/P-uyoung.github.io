@@ -18,25 +18,28 @@ use_math: true
 
 ```python
 a = np.array([1,2])
-b = np.array([5,6])
+b = np.array([[1, 2], [3, 4]])
+c = np.array([5,6])
 
-np.concatenate((a,b), axis=-1)
+np.concatenate((a,c), axis=-1)
+# array([1, 2, 5, 6])
 
-# [1, 2, 5, 6]
+np.concatenate((b,c), axis=-1)
+# ValueError: all the input array dimensions for the concatenation axis must match exactly
 ```
 <br/>
 
-(2) axis = 0 : Add as rows <br/>
+(2) axis = 0 : (when same dimension) Line up  or (when different dimensions) Add as rows <br/>
 
 
 ```python
-a = np.array([[1, 2], [3, 4]])
-b = np.array([[5, 6]])
-np.concatenate((a,b), axis=0)
+np.concatenate((a,c), axis=0)
+# array([1, 2, 5, 6])
 
-# [[1, 2],
-#  [3, 4],
-#  [5, 6]]
+np.concatenate((b,c), axis=0)
+# array([[1, 2],
+#        [3, 4],
+#        [5, 6]])
 ```
 
 <br/>
