@@ -4,6 +4,7 @@ title:  "PCA 와 K-means Clustering 의 관계"
 categories: ML
 tag: [python, jekyll]
 toc: true
+toc_sticky: false
 author_profile: false
 search: true
 use_math: true
