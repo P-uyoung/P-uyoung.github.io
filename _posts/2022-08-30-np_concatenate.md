@@ -1,8 +1,8 @@
 ---
 layout: single  
 title:  "np.concatenate(axis)"
-categories: PL
-tag: [python]
+categories: Python
+tag: [API]
 # toc: true
 # toc_sticky: true
 author_profile: false
