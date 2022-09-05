@@ -65,7 +65,6 @@ $$
 
 **Principal projection vector (axis) 는 eigenvector e 이다. 이때의 분산이 eigen-value $ \lambda\ $이며, 이는 데이터가 얼마나 spread 되어있는지를 의미한다.**
 
-<br/>
 
 #### -코드
 
@@ -134,29 +133,44 @@ plt.show()
 #### -군집 vs 분류
 
 분류는 supervised learning(지도학습)으로 label(y)값이 있지만, <br/>
+군집은 unsuperviesd learning(비지도 학습)으로 label이 사전에 알려져 있지 않을 때 사용하는 알고리즘이다. 
+<br/>
 
-군집은 unsuperviesd learning(비지도 학습)으로 label이 사전에 알려져 있지 않을 때 사용하는 알고리즘이다. <br/>
+#### -코드
 
-그렇다면 
+```python
+# k-means clustering
+k=5
+kmeans = KMeans(n_clusters=k, random_state=42)
+X_kmeans = kmeans.fit_transform(X_pca)
+y_pred = kmeans.fit_predict(X_pca)
+X_kmeans, y_pred
+
+# visualize by TSNE
+tsne = TSNE(n_components=3, random_state=42)
+X_tsne = tsne.fit_transform(X_kmeans)
+
+# 3-D graph
+fig = plt.figure()
+ax = fig.gca(projection='3d')
+fig.set_size_inches(18.5,10.5)
+ax.scatter(X_tsne[:,0], X_tsne[:,1], X_tsne[:,2], c=y_pred, cmap="jet")
+```
+
+<img src="/assets/images/2022-08-23-clustering/tsne_graph.png" alt="tsne_graph" style="zoom: 80%;" />
+
+<br/>
 
 ### (3) Relation between PCA and K-means
+k-means clustering 과 PCA 는 각각 적은 수의 centroid vector, eigenvector 의 선형 조합을 찾는다는 점에서 다르지만, <br/>
+학습에 사용되는 Objective function 이 같기 때문에 (단, k-means에는 제약조건이 추가), 꽤 같은 결과를 갖는다.
+<br/>
 
-+50
+![pca_clustering](/assets/images/2022-08-23-clustering/pca_clustering.png)
 
-
-
-It is true that K-means clustering and PCA appear to have very different goals and at first sight do not seem to be related. However, as explained in the Ding & He 2004 paper [K-means Clustering via Principal Component Analysis](http://ranger.uta.edu/~chqding/papers/KmeansPCA1.pdf), there is a deep connection between them.
-
-The intuition is that PCA seeks to represent all nn data vectors as linear combinations of a small number of eigenvectors, and does it to minimize the mean-squared reconstruction error. In contrast, K-means seeks to represent all nn data vectors via small number of cluster centroids, i.e. to represent them as linear combinations of a small number of cluster centroid vectors where linear combination weights must be all zero except for the single 11. This is also done to minimize the mean-squared reconstruction error.
-
-
-
-
-
-
-
-### REFERENCES
-
+자세한 설명과 증명은 다음 블로그에서 참고. <br/>
 <https://stats.stackexchange.com/questions/183236/what-is-the-relation-between-k-means-clustering-and-pca>
 
-[]
+<br/>
+
+<br/>
