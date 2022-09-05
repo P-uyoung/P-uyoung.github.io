@@ -69,11 +69,11 @@
                 {% endfor %}
             </ul>
 
-        <span class="nav__sub-title">CEE</span>
+        <span class="nav__sub-title">Domain Knowledge</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Project" %}
-                        <li><a href="/categories/Project" class="">Project ({{category[1].size}})</a></li>
+                    {% if category[0] == "Domain" %}
+                        <li><a href="/categories/Domain" class="">Domain ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -81,8 +81,8 @@
             <span class="nav__sub-title">DIARY</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Project" %}
-                        <li><a href="/categories/Diary" class="">Project ({{category[1].size}})</a></li>
+                    {% if category[0] == "Diary" %}
+                        <li><a href="/categories/Diary" class="">Diary ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
