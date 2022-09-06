@@ -55,6 +55,34 @@ RNN은 출력이 바로 이전 입력까지만 고려하므로 전체 입력 문
 <br/>
 
 ### Attention 
+인풋 시퀀스들 중에서 현재 아웃풋 아이템이 주목해야 하는 파트들을 직접 연결해준다.
+<br/>
+
+
+어텐션이 적용된 시퀀스 투 시퀀스 모델은 무엇이 다를까? <br/>
+
+1. 기존 인코더는 마지막 hidden state 만 디코더에게 전달했다면 어텐션이 적용되면 인코더의 모든 시점에서의 hidden state를 전부 넘겨주게 된다. <br/>
+
+*넘겨주는 정보량이 많으면 그만큼 정확도가 올라갈 수밖에 없다. <br/>
+
+
+2. hidden state 들의 중요도(attention weight)를 계산(곱)해서 나온 결과를 사용하게 된다. <br/>
+
+* 기존에는 중요도의 개념이 없었음 <br/>
+
+**각각의 hidden state의 영향을 점수(score)로 표현할 수 있고 점수(score)에 Softmax를 취한 것이 중요도가 된다.**
+<br/>
+
+![score](/assets/images/2022-09-06-attention/score.png)
+
+![score2](/assets/images/2022-09-06-attention/score2.png)
+
+<br/>
+
+
+
+
+
 (정리하겠음) <br/>
 <https://acdongpgm.tistory.com/216> <br/>
 <https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ckdgus1433&logNo=221608376139>
