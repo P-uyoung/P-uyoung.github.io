@@ -55,8 +55,9 @@ RNN은 출력이 바로 이전 입력까지만 고려하므로 전체 입력 문
 <br/>
 
 ### Attention 
-(정리하겠음)
-<https://acdongpgm.tistory.com/216>
+(정리하겠음) <br/>
+<https://acdongpgm.tistory.com/216> <br/>
+<https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ckdgus1433&logNo=221608376139>
 
 <br/>
 
