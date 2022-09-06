@@ -11,6 +11,10 @@ use_math: true
 ---
 <br/>
 
+### CONCLUSION
+**RNN 기반으로 한 Seq2Seq는 시퀀스가 길어질 때, 전체 문맥을 제대로 고려하지 못하므로, Attnetion을 사용하여 현재 아웃풋 아이템이 주목해야 하는 인풋 시퀀스 파트들을 직접 연결해준다..**
+<br/>
+
 ### RNN vs Seq2Seq
 (1) RNN <br/> 
 문맥이 있는 sequence data (음성인식, 자연어) 를 다룰 때 사용한다. <br/>
