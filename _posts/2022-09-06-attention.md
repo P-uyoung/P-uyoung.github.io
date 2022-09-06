@@ -25,10 +25,6 @@ use_math: true
 **A의 결과가 다시 A로 돌아가는 루프를 통해, x값을 통해 y를 계산할 때 이전 상태(state, NN)를 고려하게 된다.**
 <br/>
 
-자세한 설명은 다음 블로그 참고. <br/>
-<https://medium.com/humanscape-tech/rnn-recurrent-neural-network-%EC%88%9C%ED%99%98%EC%8B%A0%EA%B2%BD%EB%A7%9D-%EC%9D%84-%EC%9D%B4%ED%95%B4%ED%95%B4%EB%B3%B4%EC%9E%90-1697a5472af2>
-<br/>
-
 (2) Seq2Seq <br/>
 RNN은 출력이 바로 이전 입력까지만 고려하므로 전체 입력 문장을 고려하지 못한다. 이로 인해 정확도가 떨어지게 되는데, 이를 보완한 것이 Seq2Seq 모델이다. <br/>
 
@@ -61,12 +57,12 @@ RNN은 출력이 바로 이전 입력까지만 고려하므로 전체 입력 문
 
 어텐션이 적용된 시퀀스 투 시퀀스 모델은 무엇이 다를까? <br/>
 
-1. 기존 인코더는 마지막 hidden state 만 디코더에게 전달했다면 어텐션이 적용되면 인코더의 모든 시점에서의 hidden state를 전부 넘겨주게 된다. <br/>
+(1) 기존 인코더는 마지막 hidden state 만 디코더에게 전달했다면 어텐션이 적용되면 인코더의 모든 시점에서의 hidden state를 전부 넘겨주게 된다. <br/>
 
 *넘겨주는 정보량이 많으면 그만큼 정확도가 올라갈 수밖에 없다. <br/>
 
 
-2. hidden state 들의 중요도(attention weight)를 계산(곱)해서 나온 결과를 사용하게 된다. <br/>
+(2) hidden state 들의 중요도(attention weight)를 계산(곱)해서 나온 결과를 사용하게 된다. <br/>
 
 * 기존에는 중요도의 개념이 없었음 <br/>
 
@@ -83,13 +79,13 @@ RNN은 출력이 바로 이전 입력까지만 고려하므로 전체 입력 문
 
 
 
-(정리하겠음) <br/>
-<https://acdongpgm.tistory.com/216> <br/>
+(수식) <br/>
 <https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=ckdgus1433&logNo=221608376139>
 
 <br/>
 
 ### REFERENCE
+[RNN] <https://medium.com/humanscape-tech/rnn-recurrent-neural-network-%EC%88%9C%ED%99%98%EC%8B%A0%EA%B2%BD%EB%A7%9D-%EC%9D%84-%EC%9D%B4%ED%95%B4%ED%95%B4%EB%B3%B4%EC%9E%90-1697a5472af2> <br/>
 [1] <https://glee1228.tistory.com/3> <br/>
 [2] <https://acdongpgm.tistory.com/216>
 
