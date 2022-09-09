@@ -329,8 +329,9 @@ body {
    ========================================================================== */
 
 .page__taxonomy {
+  margin-top: -10px;
   .sep {
-    display: none;
+    display: inline;
   }
 
   strong {
@@ -338,15 +339,14 @@ body {
   }
 }
 
-.page__taxonomy-item {
-  display: inline-block;
+.page__taxonomy-item-tag {
+  display: inside;
   margin-right: 5px;
   margin-bottom: 8px;
-  padding: 5px 10px;
+  padding: 3px 8px;
   text-decoration: none;
-  border: 1px solid mix(#000, $border-color, 25%);
+  border: 1px solid  $background-color;
   border-radius: $border-radius;
-<<<<<<< HEAD
   background-color: #6da4c9;
   font-family: $sans-serif-narrow;
   // color: $muted-text-color;
@@ -373,12 +373,6 @@ body {
   &:hover {
     text-decoration: none;
     color: rgb(22, 114, 201);
-=======
-
-  &:hover {
-    text-decoration: none;
-    color: $link-color-hover;
->>>>>>> parent of 804ed39d (Tag effect)
   }
 }
 
