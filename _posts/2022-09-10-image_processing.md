@@ -132,9 +132,9 @@ convolution 과 거의 유사하다. **다만, flip 하지 않고, 바로 (3)두
 
 따라서 1-D, 2-D 식은 다음과 같다. <br/>
 
-$h(t) = (f*g)(t) = \int_{-\infty}^\infty f(\tau)g(t\textcolor{red}+\tau)d\tau$
+$h(t) = (f*g)(t) = \int_{-\infty}^\infty f(\tau)g(t\color{red}+\color{balck}\tau)d\tau$
 
-$R(i,j) = \displaystyle\sum_m\sum_n  f(m,n)g(\textcolor{red}{m-i, n-j})$
+$R(i,j) = \displaystyle\sum_m\sum_n  f(m,n)g(\color{red}{m-i, n-j}\color{balck})$
 
 cross-correlation은 주로, template matching 에 사용한다.
 
