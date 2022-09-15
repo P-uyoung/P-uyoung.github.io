@@ -21,7 +21,7 @@ title_separator          : "|"
 subtitle                 : "for not talk, but the result"
 name                     : "BearBoffin"
 description              : "곰순이의 블로그입니다"
-url                      : "https://P-uyoung.github.io"
+url                      : #"https://P-uyoung.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "P-uyoung/P-uyoung.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -41,7 +41,7 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : "Icy-Dark"
+    theme                : "icy-dark"
     issue_term           : "pathname"
   giscus:
     repo_id              : # Shown during giscus setup at https://giscus.app
