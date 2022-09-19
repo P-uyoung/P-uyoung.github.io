@@ -11,15 +11,15 @@ use_math: true
 ---
 <br/>
 
-### 결론 
+## 결론 
 
 **So k-means can be seen as a super-sparse PCA.**
 
 보통, k-means clustering 전에 노이즈 감소를 위해 PCA (principal component analysis)를 적용한다. 
 <br/>
 
-### (1) Projection / PCA
-#### -개념
+## (1) Projection / PCA
+### -개념
 <img src="/assets/images/2022-08-23-clustering/projection.jpg" alt="projection.jpg" style="zoom: 50%;" />
 <br/>
 
@@ -66,7 +66,7 @@ $$
 **Principal projection vector (axis) 는 eigenvector e 이다. 이때의 분산이 eigen-value $ \lambda\ $이며, 이는 데이터가 얼마나 spread 되어있는지를 의미한다.**
 
 
-#### -코드
+### -코드
 
 코드로 보면 다음과 같다.
 
@@ -126,17 +126,15 @@ plt.show()
 <img src="/assets/images/2022-08-23-clustering/image-20220823175153357.png" alt="image-20220823175153357" style="zoom:100%;" />
 <br/>
 
-### (2) K-means clustering
+## (2) K-means clustering
 
-****
-
-#### -군집 vs 분류
+### -군집 vs 분류
 
 분류는 supervised learning(지도학습)으로 label(y)값이 있지만, <br/>
 군집은 unsuperviesd learning(비지도 학습)으로 label이 사전에 알려져 있지 않을 때 사용하는 알고리즘이다. 
 <br/>
 
-#### -코드
+### -코드
 
 ```python
 # k-means clustering
@@ -161,7 +159,7 @@ ax.scatter(X_tsne[:,0], X_tsne[:,1], X_tsne[:,2], c=y_pred, cmap="jet")
 
 <br/>
 
-### (3) Relation between PCA and K-means
+## (3) Relation between PCA and K-means
 k-means clustering 과 PCA 는 각각 적은 수의 centroid vector, eigenvector 의 선형 조합을 찾는다는 점에서 다르지만, <br/>
 학습에 사용되는 Objective function 이 같기 때문에 (단, k-means에는 제약조건이 추가), 꽤 같은 결과를 갖는다.
 <br/>
