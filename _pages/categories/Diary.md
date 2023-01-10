@@ -1,7 +1,7 @@
 ---
 title: "Diary"
 layout: archive
-permalink: categories/Miary
+permalink: categories/Diary
 author_profile: true
 sidebar_main: true
 ---
