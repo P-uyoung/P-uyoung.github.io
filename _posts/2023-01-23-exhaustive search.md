@@ -2,7 +2,7 @@
 layout: single  
 title:  "완전탐색"
 categories: Algorithm
-tag: [set, map, 에라토스테네스체, join]
+tag: [set, map, 에라토스테네스체, join, permutations, combinations]
 # toc: true
 # toc_sticky: true
 author_profile: false
@@ -13,9 +13,8 @@ use_math: true
 
 **가능한 모든 상황 조사**
 
-<br/>
 
-## 1. 소수(prime number) 찾기
+## 1. (순열) 소수(prime number) 찾기
 
 (1) 나의 풀이
 
@@ -56,6 +55,7 @@ def solution(numbers):
             if temp != '':
                 cand.add(int(temp))
 
+    # 소수특성 이용
     for num in cand:
         root = math.sqrt(num)
         check = 'true'
@@ -68,7 +68,6 @@ def solution(numbers):
 
     return answer
 ```
-<br/>
 
 (2) 모범답안 : 에라토스테네스 체
 
@@ -90,4 +89,86 @@ def solution(numbers):
         a -= set(range(i*2, max(a)+1, i))
     
     return len(a)
+```
+<br/>
+
+## 2. 소인수분해(Prime number)
+
+
+(1) 나의 풀이
+
+- 소인수분해
+
+- 조합(combinations) 이용
+<br/>
+
+-소인수분해 함수
+
+: 2부터 시작하고, 2로 나누지 못할 경우 +1
+
+```python
+def factorization(x):
+    d = 2
+    a = []
+    while d <= x:
+        if x % d == 0:
+            a.append(d)
+            x = x / d
+        else:
+            d = d + 1
+
+factorization(24)  
+print(a)     # [1, 2, 4]      
+```
+
+```python
+from itertools import combinations
+
+def solution(brown, yellow):
+    prime = []
+    d = 2
+    
+    # 소인수분해
+    x = yellow
+    while d <=x:
+        if x % d == 0:
+           x = x/d
+           prime.append(d)
+        else:
+            d += 1
+    
+    # 조합(combination)
+    b = set()
+    for k in range(1,int(len(prime)/2)+1):
+        combn = list(combinations(prime, k))
+        for i in range(len(combn)):
+            temp = 1
+            for j in range(k):
+                temp *= combn[i][j]
+            b.add(temp)
+    b.add(1)
+    b = list(b)
+    a = []
+    for i in b:
+        a.append(int(yellow/i))
+        
+    # 둘레의 합
+    for i in range(len(b)):
+        if brown == (b[i]*2+a[i]*2+4):
+            if b[i] <= a[i]:
+                return [a[i]+2, b[i]+2]
+            else:
+                return [b[i]+2, a[i]+2]
+```
+
+(2) 모범답안
+
+- 간단하게 약수 구하기
+```python
+def solution(brown, yellow):
+    for i in range(1, yellow**0.5+1):
+        if yellow%i == 0:
+            if (i + yellow//i)*2 == brown-4:
+                return [yellow//i+2, i+2]
+
 ```
