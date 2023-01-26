@@ -1,8 +1,8 @@
 ---
 layout: single  
-title:  "Greedy Algorithm"
+title:  "완전탐색"
 categories: Algorithm
-tag: [Queu]
+tag: [set, map, 에라토스테네스체, join]
 # toc: true
 # toc_sticky: true
 author_profile: false
@@ -11,72 +11,83 @@ use_math: true
 ---
 <br/>
 
-**부분적인 최적해가 전체적인 최적해가 되는 경우**
+**가능한 모든 상황 조사**
 
 <br/>
 
-## 1. 두 큐 합 같게 하기 (카카오_2020_level2)
-큐와 포인터 2개
+## 1. 소수(prime number) 찾기
+
+(1) 나의 풀이
+
+소수 특성 : 제곱근 이하의 숫자들을 나누었을 때 0으로 떨어지는 경우가 없을 때, 소수이다.
 
 ```python
-def solution(queue1, queue2):
-    queue_sum = (sum(queue1) + sum(queue2))
-    
-    if queue_sum%2 == 1:
-        return -1
-    
-    target = queue_sum/2
-    cur = sum(queue1)
-    
-    que3 = queue1 + queue2
-    end = len(queue1)-1
-    start = 0
-    
+from itertools import permutations
+import math
+
+def solution(numbers):
     answer = 0
-    
-    while cur != target:
-        if cur < target:
-            end += 1
-            
-            if end == len(que3):
-                return -1
-            
-            cur += que3[end]
-            
-        else:
-            cur -= que3[start]
-            start += 1
-        answer += 1
+    cand = set()
+    root = 0
+    n = len(numbers)
+
+    temp = ''
+    for i in range(n):
+        temp += '0'
+    if temp == numbers:
+        return 0
+
+    # 일의 자리
+    prime = [2,3,5,7]
+    one = set(numbers)
+    for i in one:
+        if int(i) in prime:
+            answer += 1
+
+    # 2이상
+    for k in range(2,n+1):
+        permu = list(permutations(numbers, k))
+        for i in range(len(permu)):
+            temp = ''
+            for j in range(k):
+                if permu[i][0] == '0':
+                    break
+                temp += permu[i][j]
+            if temp != '':
+                cand.add(int(temp))
+
+    for num in cand:
+        root = math.sqrt(num)
+        check = 'true'
+        for j in range(2, math.floor(root)+1):
+            if num % j == 0:
+                check = 'fail'
+                break
+        if check == 'true':
+            answer += 1
+
     return answer
 ```
 <br/>
 
-## 2. 조이스틱 최소작동 (프로그래머스_level2)
-A가 아닌 글자간의 최소 거리 (각 인덱스 마다)
+(2) 모범답안 : 에라토스테네스 체
 
-시작점이 0 인덱스이므로, idx는 거리를 의미하게 된다.
+- map 함수 : map(함수, 적용할 자료형)
+
+- join 함수 : 매개변수 리스트 요소를 합쳐서 하나의 문자열로 반환
 
 ```python
-def solution(name):
-    answer = 0
-    n = len(name)
+from itertools import permutations
+def solution(numbers):
+    a = set()
+    # 에라토스테네스체 채우기
+    for k in range(len(numbers)):
+        a |= map(int, map("".join, permutations(numbers, k+1)))
+    a -= set(range(0,2))
 
-    def alphabet_to_num(chr):
-        num_char = [i for i in range(14)] + [j for j in range(12,0,-1)]
-        return num_char[ord(chr)-ord('A')]
+    # 에라토스테네스체 빼기
+    for i in range(2, int(max(a)**0.5)+1):
+        a -= set(range(i*2, max(a)+1, i))
     
-    for ch in name:
-        answer += alphabet_to_num(ch)   # letter_cost
-
-    move = n-1
-    for idx in range(n):
-        next_id = idx + 1
-        while (next_id < n) and (name[next_idx]=='A'):
-            next_id += 1
-        distance = min(idx, n-next_idx)         # 왼쪽 오른쪽 중 더 짧은 거리
-        each = idx + (n-next_idx) + distance    # 각 idx마다 움직인 총 거리
-        move = min(move, each)          # move_cost
-
-    answer += move
-    return answer
+    return len(a)
 ```
