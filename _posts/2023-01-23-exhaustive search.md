@@ -102,9 +102,9 @@ def solution(numbers):
 - 조합(combinations) 이용
 <br/>
 
--소인수분해 함수
+- 소인수분해 함수
 
-: 2부터 시작하고, 2로 나누지 못할 경우 +1
+> 2부터 시작하고, 2로 나누지 못할 경우 +1
 
 ```python
 def factorization(x):
