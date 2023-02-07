@@ -29,7 +29,14 @@
                         <li><a href="/categories/CV" class="">Computer Vision ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
-            </ul>             
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Paper" %}
+                        <li><a href="/categories/Paper" class="">Paper ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>                 
         <span class="nav__sub-title">Coding Test</span>
             <ul>
                 {% for category in site.categories %}
@@ -53,7 +60,7 @@
                 {% endfor %}
             </ul>
 
-        <span class="nav__sub-title">Domain Knowledge</span>
+        <span class="nav__sub-title">Engineering Domain</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Domain" %}
@@ -62,14 +69,6 @@
                 {% endfor %}
             </ul>
 
-            <span class="nav__sub-title">DIARY</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Diary" %}
-                        <li><a href="/categories/Diary" class="">Diary ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
        
       </li>
       <li>

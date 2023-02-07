@@ -163,7 +163,8 @@ def solution(brown, yellow):
 
 (2) 모범답안
 
-- 간단하게 약수 구하기
+- 간단하게 약수 구하기  
+
 ```python
 def solution(brown, yellow):
     for i in range(1, yellow**0.5+1):

@@ -1,5 +1,5 @@
 ---
-title: "Domain knowledge"
+title: "Domain"
 layout: archive
 permalink: categories/Domain
 author_profile: true
