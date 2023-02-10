@@ -182,7 +182,7 @@ def solution(brown, yellow):
 
 - 제한사항의 던전배열 최대 길이가 8이다. permutation으로 풀 수 있다.
 
-- `난이도가 답` 이였다.  
+- `난이도가 답` 이였다.   
 
 ```python
 from itertools import permutations
@@ -247,7 +247,7 @@ def solution(n, wires):
         [s.update(v) for _ in sub for v in sub if set(v) & s]
         ans = min(ans, abs(n-2*len(s)))
 ```
-<br/>
+
 
 (2) DFS로 풀기
 
@@ -272,7 +272,6 @@ def solution(n, wires):
         
     return answer
 ```
-
 
 (3) BFS로 풀기
 
@@ -321,3 +320,6 @@ def solution(n, wires):
 
     return min(map(lambda v: abs((n-(v+1))-(v+1)), numChild))         # + 1은 parent node와의 연결
 ```
+
+<br/>
+
