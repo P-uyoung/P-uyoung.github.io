@@ -323,3 +323,64 @@ def solution(n, wires):
 
 <br/>
 
+## [4. 타겟 넘버 (프로그래머스_level2)](https://school.programmers.co.kr/learn/courses/30/lessons/43165)
+
+**(1) 나의 풀이**
+
+- 중복순열 
+
+```python
+from itertools import permutations, combinations, product, combinations_with_replacement
+
+# (1) 순열(permutations)
+a = list(permutations(['A', 'B', 'C'], 2))
+print(a)    # nPr, [('A', 'B'), ('A', 'C'), ('B', 'A'), ('B', 'C'), ('C', 'A'), ('C', 'B')]
+
+# (2) 조합(combinations)
+a = list(combinations(['A','B','C'], 2))
+print(a)    # nCr, [('A', 'B'), ('A', 'C'), ('B', 'C')]
+
+# (3) 중복순열(product)
+a = list(product(['A','B','C'], repeat=4))
+print(a)    # nPr
+
+# (4) 중복조합(combinations_with_replacement)
+a = list(combinations_with_replacement(['A','B','C'], 2))
+print(a)    # nHr
+```
+
+```python
+import copy
+from itertools import product
+
+def solution(numbers, target):
+    arr = list(product([1,-1], repeat=len(numbers)))
+    result = []
+    for i in range(len(arr)):
+        result.append(sum([x*y for x,y in zip(numbers, arr[i])]))
+
+    return result.count(target)
+```
+
+**(2) (정석)DFS**
+
+```python
+answer = 0
+def dfs(idx, numbers, target, value):
+    global answer
+    N = len(numbers)
+    if idx==N and value == target:
+        answer += 1
+        return
+    if idx == N:
+        return
+    dfs(idx+1, numbers, target, value+numbers[idx])
+    dfs(idx+1, numbers, target, value-numbers[idx])
+
+def solution(numbers, target):
+    dfs(0, numbers, target, 0)
+
+return answer
+```
+<br/>
+
