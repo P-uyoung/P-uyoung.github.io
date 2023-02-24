@@ -1,21 +1,21 @@
 ---
 layout: single  
-title:  "yield 키워드와 generator"
+title:  "제너레이터(generator)"
 categories: Python
-tag: []
+tag: [generator]
 # toc: true
 # toc_sticky: true
 author_profile: false
 search: true
 use_math: true
 ---
-<br/>
-
 ## ***Generator is called as 'lazy iterator'***
 
 **yield 키워드를 사용하며, 여러 개의 데이터를 미리 만들어 놓지 않고 필요할 때마다 하나씩 만들어낼 수 있는 객체**
 
 **메모리에 한 번에 올리기 부담스러운 대용량 파일을 읽거나, 스트림 데이터를 처리할 때 유용**
+
+<span style="color:blue">**-리스트 return이랑 같아보이지만, 아래와 같은 차이가 있다.**</span>
 
 ```python
 import time 
@@ -31,7 +31,9 @@ def yield_abc():
     for c in 'abc':
         time.sleep(1)
         yeild c
+```
 
+```python
 for r in return_abc():
   print(r) 
 
@@ -50,3 +52,14 @@ for r in yield_abc():
 # after 1 minute
 # c
 ```
+
+**- Generator Comprehension**
+
+list comprehension과 같은데, 단지 '대괄호'가 아니라 '소괄호'를 사용한다는 점이 다르다.
+
+```python
+abc = (c for i in 'abc')
+
+print(abc) # <generator object <genexpr> at 0x7f2dab21ff90>
+```
+<br/>
