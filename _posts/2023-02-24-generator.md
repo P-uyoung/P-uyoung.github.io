@@ -63,3 +63,40 @@ abc = (c for i in 'abc')
 print(abc) # <generator object <genexpr> at 0x7f2dab21ff90>
 ```
 <br/>
+
+
+## [1. 단어 변환 (level3)](https://school.programmers.co.kr/learn/courses/30/lessons/43163)
+
+**-자료구조 : Generator, Dictionary**
+
+**-zip() 함수를 사용하여, 두 문자열 비교**
+
+**visited가 아닌, dist 개념으로 풂**
+
+```python
+def get_next(cur, words):
+    for nxt in words:
+        count = 0
+        for c, n in zip(cur, nxt):
+            if c != n:
+                count += 1
+            if count > 1:
+                break
+        if count == 1:
+            yield nxt
+
+def solution(begin, target, words):
+    dist = {begin:0}
+    q = []
+    q.append(begin)
+
+    while q:
+        cur = q.pop(0)
+
+        for nxt in get_next(cur, words):
+            if nxt not in dist:
+                dist[nxt] = dist[cur] + 1
+                q.append(nxt)
+    return dist.get(target, 0)
+```
+<br/>
