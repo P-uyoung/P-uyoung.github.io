@@ -1,8 +1,8 @@
 ---
 layout: single  
-title:  "RuntimeError 정리"
+title:  "[Python] RuntimeError"
 categories: Python
-tag: [Error]
+# tag: [Error]
 # toc: true
 # toc_sticky: true
 author_profile: false

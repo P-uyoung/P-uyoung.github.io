@@ -1,10 +1,10 @@
 ---
 layout: single  
-title:  "제너레이터(generator)"
+title:  "[Python] 제너레이터(generator)"
 categories: Python
-tag: [generator]
-# toc: true
-# toc_sticky: true
+# tag: [generator]
+toc: true
+toc_sticky: true
 author_profile: false
 search: true
 use_math: true
@@ -65,7 +65,9 @@ print(abc) # <generator object <genexpr> at 0x7f2dab21ff90>
 <br/>
 
 
-## [1. 단어 변환 (level3)](https://school.programmers.co.kr/learn/courses/30/lessons/43163)
+## 코테 문제
+
+### [1. 단어 변환 (level3)](https://school.programmers.co.kr/learn/courses/30/lessons/43163)
 
 **-자료구조 : Generator, Dictionary**
 

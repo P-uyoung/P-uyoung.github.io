@@ -1,17 +1,17 @@
 ---
 layout: single  
-title:  "순열 및 조합"
+title:  "[Python] 순열 및 조합"
 categories: Python
-tag: [Permutation, Combination]
-# toc: true
-# toc_sticky: true
+# tag: [Permutation, Combination]
+toc: true
+toc_sticky: true
 author_profile: false
 search: true
 use_math: true
 ---
 <br/>
 
-- 중복순열 
+## 순열, 조합
 
 ```python
 from itertools import permutations, combinations, product, combinations_with_replacement
@@ -34,7 +34,9 @@ print(a)    # nHr
 ```
 
 
-## [4. 타겟 넘버 (프로그래머스_level2)](https://school.programmers.co.kr/learn/courses/30/lessons/43165)
+## 코테 문제
+
+### [1. 타겟 넘버 (프로그래머스_level2)](https://school.programmers.co.kr/learn/courses/30/lessons/43165)
 
 **(1) 중복순열**
 

@@ -18,13 +18,6 @@
             </ul>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "DL" %}
-                        <li><a href="/categories/DL" class="">Deep Learning ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
                     {% if category[0] == "CV" %}
                         <li><a href="/categories/CV" class="">Computer Vision ({{category[1].size}})</a></li>
                     {% endif %}
@@ -37,14 +30,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>                 
-        <span class="nav__sub-title">Coding Test</span>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "Algorithm" %}
-                        <li><a href="/categories/Algorithm" class="">Algorithm ({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+        <span class="nav__sub-title">Program Languages</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Python" %}
@@ -52,13 +38,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "PreviousTest" %}
-                        <li><a href="/categories/PreviousTest" class="">Previous Test({{category[1].size}})</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
+
 
         <span class="nav__sub-title">Engineering Domain</span>
             <ul>
