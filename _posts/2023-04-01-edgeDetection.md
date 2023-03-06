@@ -1,6 +1,6 @@
 ---
 layout: single  
-title:  "[CV] 4. Mosaics and Rectification (feature point)"
+title:  "[CV] 3. Edge Detection (Hough Transfrom)"
 categories: CV
 tag: [Image Processing]
 toc: true

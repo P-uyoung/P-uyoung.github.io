@@ -14,7 +14,7 @@ use_math: true
 <br/>
 
 
-## 0. 결론
+## 결론
 <br/>
 이미지 프로세싱은 low-level 컴퓨터비전(CV)에 해당한다. 
 <br/>
