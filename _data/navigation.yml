@@ -1,16 +1,33 @@
 # main links
 main:
-  # - title: "Category"
-  #   url: /categories/
-  - title: "Tag"
-    url: /tags/
+  - title: "Home"
+    url: https://p-uyoung.github.io/
+
   - title: "Search"
-    url: /search/  
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+    url: /search/ 
+
+  - title: "About"
+    url: https://www.notion.so/uyoung0/e1048ab701d949f9a11f14a304150045
+
+  - title: "GitHub"
+    url: https://github.com/choiiis
+
+  # - title: "Projects"
+  #   url: /projects/
+
+  # - title: "Categories"
+  #   url: /categories/
+
+# sidebar navigation (categories)
+# 2022.02.15 sidebar update : simple ver.
+categories:
+  - title: "Machine Learning"
+    url: /categories/ML/
+  - title: "Computer Vision"
+    url: /categories/CV/
+  - title: "Touble Shooting"
+    url: /categories/Shooting/
+  - title: "Python"
+    url: /categories/Python/
+  - title: "Domain"
+    url: /categories/Domain/
