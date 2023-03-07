@@ -1,16 +1,17 @@
+# 참고 블로그 https://github.com/choiiis/choiiis.github.io
 # main links
 main:
   - title: "Home"
     url: https://p-uyoung.github.io/
 
-  - title: "Search"
-    url: /search/ 
-
+  - title: "search"
+    url: /search/
+  
   - title: "About"
     url: https://www.notion.so/uyoung0/e1048ab701d949f9a11f14a304150045
 
   - title: "GitHub"
-    url: https://github.com/choiiis
+    url: https://github.com/p-uyoung
 
   # - title: "Projects"
   #   url: /projects/
@@ -25,9 +26,10 @@ categories:
     url: /categories/ML/
   - title: "Computer Vision"
     url: /categories/CV/
-  - title: "Touble Shooting"
+  - title: "Trouble Shooting"
     url: /categories/Shooting/
   - title: "Python"
     url: /categories/Python/
   - title: "Domain"
     url: /categories/Domain/
+
