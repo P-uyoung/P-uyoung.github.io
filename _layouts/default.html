@@ -59,6 +59,9 @@
     
     {% include head.html %}
     {% include head/custom.html %}
+    {% if page.use_math %}
+      {% include mathjax_support.html %}
+    {% endif %}
 
     <!-- <link rel="shortcut icon" type="image/x-icon" href="https://choiiis.github.io/assets/images/favicon/favicon.ico"> -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://choiiis.github.io/assets/images/favicon/apple-touch-icon.png">
