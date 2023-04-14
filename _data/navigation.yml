@@ -22,18 +22,34 @@ main:
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
-  - title: "Machine Learning"
-    url: /categories/ML/
-  - title: "Computer Vision"
-    url: /categories/CV/
-  - title: "Trouble Shooting"
-    url: /categories/Shooting/
-  - title: "Coding Test"
-    url: /categories/Coding/
-  - title: "Python"
-    url: /categories/Python/
-  - title: "Domain"
-    url: /categories/Domain/
-  - title: "Diary"
-    url: /categories/Diary/
+  - title: "Data"
+    children:
+    - title: "Docker"
+    - url: /categories/Docker/
 
+
+  - title: "AI"
+    children:
+    - title: "Machine_Learning"
+    - url : /categories/Machine_Learning/
+
+    - title: "Computer_Vision"
+    - url: /categories/Computer_Vision/
+
+  - title: "CS"
+    children:
+    - title: "Interview"
+      url: /categories/Interview/
+    - title: "Coding_Test"
+      url: /categories/Coding_Test/
+    - title: "Python"
+      url: /categories/Python/
+  
+  - title: "Others"
+    children:
+    - title: "Trouble_Shooting"
+      url: /categories/Trouble_Shooting/
+    - title: "Domain"
+      url: /categories/Domain/
+    - title: "Diary"
+      url: /categories/Diary/

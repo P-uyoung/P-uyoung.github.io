@@ -1,9 +1,9 @@
 ---
-title: "Coding Test"
+title: "Interview"
 layout: category
-permalink: /categories/Coding/
+permalink: /categories/Interview/
 author_profile: true
-taxonomy: Coding
+taxonomy: Interview
 sidebar:
   nav: "categories"
 ---

@@ -1,7 +1,7 @@
 ---
 layout: single  
 title:  "[CV] 6. optical flow (LKtracking)"
-categories: CV
+categories: Computer_Vision
 tag: [Image Processing]
 toc: true
 toc_sticky: false

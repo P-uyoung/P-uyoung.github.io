@@ -1,7 +1,7 @@
 ---
 layout: single  
 title:  "[CV] 4. Photometric Stereo"
-categories: CV
+categories: Computer_Vision
 tag: [Image Processing]
 toc: true
 toc_sticky: false

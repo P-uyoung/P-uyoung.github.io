@@ -1,7 +1,7 @@
 ---
 layout: single  
 title:  "[CV] 7. Detection (using deeplearning)"
-categories: CV
+categories: Computer_Vision
 tag: [Image Processing]
 toc: true
 toc_sticky: false
