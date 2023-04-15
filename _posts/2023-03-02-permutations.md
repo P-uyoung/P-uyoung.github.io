@@ -1,8 +1,8 @@
 ---
 layout: single  
-title:  "[Python] 순열 및 조합"
+title:  "순열 및 조합"
 categories: Python
-# tag: [Permutation, Combination]
+tag: [Permutation, Combination, 타겟 넘버]
 toc: true
 toc_sticky: true
 author_profile: false

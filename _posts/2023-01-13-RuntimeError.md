@@ -1,6 +1,6 @@
 ---
 layout: single  
-title:  "[Python] RuntimeError"
+title:  "RuntimeError: dictionary changed size during iteration"
 categories: Python
 # tag: [Error]
 # toc: true
@@ -12,7 +12,7 @@ use_math: true
 
 ## 1. RuntimeError: dictionary changed size during iteration
 
-반목문안에서 dic이나 list 사이즈가 바뀌면 발생하는 에러이다.
+반목문안에서 dic나 set의 사이즈가 바뀌면 발생하는 에러이다.
 
 **<span style="color:dodgerblue">다만, break 하여 for문에서 나갈 경우는 발생하지 않는다.</span>**
 

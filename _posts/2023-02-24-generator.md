@@ -1,8 +1,8 @@
 ---
 layout: single  
-title:  "[Python] 제너레이터(generator)"
+title:  "제너레이터(generator)"
 categories: Python
-# tag: [generator]
+tag: [단어 변환]
 toc: true
 toc_sticky: true
 author_profile: false
