@@ -1,7 +1,7 @@
 ---
 layout: single  
-title:  "순열 및 조합"
-categories: Python
+title:  "순열 및 조합 (43165 타겟 넘버)"
+categories: Coding_Test
 tag: [Permutation, Combination, 타겟 넘버]
 toc: true
 toc_sticky: true

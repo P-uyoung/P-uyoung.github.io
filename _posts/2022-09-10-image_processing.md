@@ -1,6 +1,6 @@
 ---
 layout: single  # single, 댓글기능을 달기 위해...
-title:  "[CV] 1. 이미지 프로세싱"
+title:  "(1) 이미지 프로세싱"
 categories: Computer_Vision
 tag: [Image Processing]
 toc: true

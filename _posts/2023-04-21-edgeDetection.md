@@ -1,6 +1,6 @@
 ---
 layout: single  
-title:  "[CV] 3. Edge Detection (Hough Transfrom)"
+title:  "(3) Edge Detection (Hough Transfrom)"
 categories: Computer_Vision
 tag: [Image Processing]
 toc: true

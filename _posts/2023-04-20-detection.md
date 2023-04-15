@@ -1,6 +1,6 @@
 ---
 layout: single  
-title:  "[CV] 7. Detection (using deeplearning)"
+title:  "(7) Detection (using deeplearning)"
 categories: Computer_Vision
 tag: [Image Processing]
 toc: true

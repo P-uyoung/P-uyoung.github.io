@@ -1,8 +1,8 @@
 ---
 layout: single  
-title:  "제너레이터(generator)"
-categories: Python
-tag: [단어 변환]
+title:  "제너레이터 (43163 단어 변환)"
+categories: Coding_Test
+# tag: [단어 변환]
 toc: true
 toc_sticky: true
 author_profile: false

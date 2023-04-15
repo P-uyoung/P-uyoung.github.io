@@ -31,10 +31,9 @@ categories:
   - title: "AI"
     children:
     - title: "Machine_Learning"
-    - url : /categories/Machine_Learning/
-
+      url : /categories/Machine_Learning/
     - title: "Computer_Vision"
-    - url: /categories/Computer_Vision/
+      url: /categories/Computer_Vision/
 
   - title: "CS"
     children:
@@ -42,8 +41,6 @@ categories:
       url: /categories/Interview/
     - title: "Coding_Test"
       url: /categories/Coding_Test/
-    - title: "Python"
-      url: /categories/Python/
   
   - title: "Others"
     children:

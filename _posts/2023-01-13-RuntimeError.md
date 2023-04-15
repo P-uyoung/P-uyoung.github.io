@@ -1,10 +1,10 @@
 ---
 layout: single  
-title:  "RuntimeError: dictionary changed size during iteration"
-categories: Python
+title:  "RuntimeError"
+categories: Coding_Test
 # tag: [Error]
-# toc: true
-# toc_sticky: true
+toc: true
+toc_sticky: true
 author_profile: false
 search: true
 use_math: true

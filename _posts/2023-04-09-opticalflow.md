@@ -1,6 +1,6 @@
 ---
 layout: single  
-title:  "[CV] 6. optical flow (LKtracking)"
+title:  "(6) optical flow (LKtracking)"
 categories: Computer_Vision
 tag: [Image Processing]
 toc: true

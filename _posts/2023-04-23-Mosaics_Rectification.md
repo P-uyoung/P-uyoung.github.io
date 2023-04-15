@@ -1,6 +1,6 @@
 ---
 layout: single  
-title:  "[CV] 5. Mosaics and Rectification (feature point)"
+title:  "(5) Mosaics and Rectification (feature point)"
 categories: Computer_Vision
 tag: [Image Processing]
 toc: true
