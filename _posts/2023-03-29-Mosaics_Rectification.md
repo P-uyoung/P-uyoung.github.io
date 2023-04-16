@@ -11,3 +11,12 @@ use_math: true
 ---
 
 <br/>
+
+
+https://staff.fnwi.uva.nl/r.vandenboomgaard/IPCV20162017/20162017/LabExercises/Lab_ImageMosaic.html
+
+https://hygenie-studynote.tistory.com/52
+
+
+# 투시변환행렬 반환
+https://deep-learning-study.tistory.com/200
