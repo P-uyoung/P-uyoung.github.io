@@ -23,3 +23,6 @@ Optical flow는 (1) color constancy, (2) small motion 조건하에 (u,v) 일차�
 
 ## 2. Lukas kanade (LK) method
 
+<!-- https://powerofsummary.tistory.com/35 -->
+
+<!-- https://gaussian37.github.io/vision-concept-optical_flow/ -->
