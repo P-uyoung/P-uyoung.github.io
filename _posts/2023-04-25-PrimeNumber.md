@@ -113,7 +113,7 @@ def solution(n, k):
     return answer
 ```
 
-#### 2. [소수 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/42839)
+#### 2. [소수 찾기 (lv2)](https://school.programmers.co.kr/learn/courses/30/lessons/42839)
 
 - map 함수 : map(함수, 적용할 자료형)
 
