@@ -65,9 +65,9 @@ def isPrime(n):
 ```python
 import math
 N = 25
-eritos = set(range(2,N+1))
+eritos = set(range(2,N+1))          # 에라토스테네스 체 채우기
 
-for i in range(2, int(math.sqrt(N))+1):
+for i in range(2, int(math.sqrt(N))+1): # 에라토스테네스 체 빼기
     eritos -= set(range(i*2,N+1,i))
 
 eritos  # {2, 3, 5, 7, 11, 13, 17, 19, 23}
