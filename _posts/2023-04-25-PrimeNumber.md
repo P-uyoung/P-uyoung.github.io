@@ -77,7 +77,7 @@ eritos  # {2, 3, 5, 7, 11, 13, 17, 19, 23}
 
 ### 코테 문제
 
-#### 1. [k진수에서 소수 개수 구하기 (lv2)](https://school.programmers.co.kr/learn/courses/30/lessons/92335)
+#### (1) [k진수에서 소수 개수 구하기 (lv2)](https://school.programmers.co.kr/learn/courses/30/lessons/92335)
 
 - 문제 상황 : n을 k진법으로 바꾸고, 0을 기준으로 split 한 후, 10진법 기준으로 소수의 개수를 찾기
 
@@ -113,7 +113,7 @@ def solution(n, k):
     return answer
 ```
 
-#### 2. [소수 찾기 (lv2)](https://school.programmers.co.kr/learn/courses/30/lessons/42839)
+#### (2) [소수 찾기 (lv2)](https://school.programmers.co.kr/learn/courses/30/lessons/42839)
 
 - map 함수 : map(함수, 적용할 자료형)
 
