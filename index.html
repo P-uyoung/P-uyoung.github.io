@@ -1,6 +1,20 @@
 ---
-layout: home
-author_profile: true
+excerpt : "곰순이 블로그 "
+layout: archive
+sidebar_main: true
 sidebar:
     nav: "categories"
+author_profile: true
+entries_layout: list
+header:
+    overlay_image: /assets/images/avatar.jpg
+    overlay_filter: 0.5 # same as adding an opacity of 0.5 to a black background
+    caption: ""
 ---
+
+<div class="grid__wrapper">
+    {% for post in paginator.posts %}
+    {% include archive-single.html type="list" %}
+    {% endfor %}
+</div>
+{% include paginator.html %} 

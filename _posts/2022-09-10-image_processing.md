@@ -8,8 +8,14 @@ toc_sticky: false
 author_profile: false
 search: true
 use_math: true
+header:
+  overlay_image: /assets/images/2022-09-10-image_processing/covolution.png
+  overlay_filter: 0.3
+  teaser: /assets/images/2022-09-10-image_processing/covolution.png
 ---
 [CV_basic] 게시글은 CMU의 computer vision 강의를 토대로 작성하였습니다. <br/>
+
+
 <http://www.cs.cmu.edu/afs/cs/academic/class/15385-s12/www/>
 <br/>
 
