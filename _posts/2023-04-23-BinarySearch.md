@@ -1,6 +1,6 @@
 ---
 layout: single  
-title:  "(9) BinarySearch"
+title:  "(14) BinarySearch"
 categories: Coding_Test
 tag: [Binary Search]
 toc: true

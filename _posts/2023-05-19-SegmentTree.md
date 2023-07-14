@@ -1,6 +1,6 @@
 ---
 layout: single  
-title:  "(10) Segment Tree"
+title:  "(15) Segment Tree"
 categories: Coding_Test
 tag: [Segment Tree, 구분합]
 toc: true
