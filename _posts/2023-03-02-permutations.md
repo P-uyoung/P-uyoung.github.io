@@ -34,6 +34,19 @@ print(a)    # nHr
 ```
 
 
+개수만 구하고자 할 때, 
+
+```python
+import math
+
+math.perm(n, r)
+
+math.comb(n, r)
+
+math.factorial(n)
+```
+
+
 ## 코테 문제
 
 ### [1. 타겟 넘버 (프로그래머스_level2)](https://school.programmers.co.kr/learn/courses/30/lessons/43165)
