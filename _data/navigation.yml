@@ -35,7 +35,7 @@ categories:
     - title: "Computer_Vision"
       url: /categories/Computer_Vision/
     - title: "Aivle"
-    url: /categories/Aivle/
+      url: /categories/Aivle/
 
   - title: "CS"
     children:
