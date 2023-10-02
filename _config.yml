@@ -16,7 +16,7 @@ minimal_mistakes_skin: "plum" #"plum", "default" "air", "aqua", "contrast", "dar
 
 # Site Settings
 locale: "ko-KR" #"en-US"
-title: "uyoung blog"
+title: "Quickly & Accurately"
 title_separator: "&#124;"
 subtitle: # site tagline that appears below site title in masthead
 name: "BearBoffin"
@@ -24,7 +24,7 @@ description: "곰순이의 블로그입니다"
 url: "https://P-uyoung.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: "P-uyoung/P-uyoung.github.io"
-teaser: #
+teaser: "/assets/images/knowledge.jpg"
 # logo                     : "/assets/images/meee.svg"
 #"/assets/images/monster.png"
 masthead_title: # overrides the website title displayed in the masthead, use " " for no title

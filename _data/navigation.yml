@@ -22,10 +22,10 @@ main:
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
-  - title: "Data"
-    children:
-    - title: "Docker"
-    - url: /categories/Docker/
+  # - title: "Data"
+  #   children:
+  #   - title: "Docker"
+  #   - url: /categories/Docker/
 
 
   - title: "AI"
@@ -44,9 +44,9 @@ categories:
     - title: "Coding_Test"
       url: /categories/Coding_Test/
   
-  - title: "Others"
+  - title: "Projects"
     children:
     - title: "Trouble_Shooting"
       url: /categories/Trouble_Shooting/
-    - title: "Domain"
-      url: /categories/Domain/
+    # - title: "Domain"
+    #   url: /categories/Domain/

@@ -494,28 +494,20 @@
     position: relative;
     border-radius: $border-radius;
     overflow: hidden;
-    margin-right: 0.5em;
+    margin-right: 1em;
     display: inline;
     justify-content: center;
     float : left;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
-    background-color: mix(rgb(122, 122, 122), $background-color, 10%);
+    // background-color: mix(rgb(122, 122, 122), $background-color, 10%);
     backdrop-filter: blur(10px);
     width: 15em;
     max-height: 130px;
     text-align: center;
     vertical-align: middle;
 
-    img {
-      margin: auto;
-      position: relative; //absolute;
-      object-fit: contain;
-      overflow: hidden;
-      justify-content: center;
-      transition: all 0.3s linear; //hover 시간 조정
-    }
-
+    
     @include breakpoint($small) {
       min-height: 130px;
       background-size: contain; //비율 강제 고정

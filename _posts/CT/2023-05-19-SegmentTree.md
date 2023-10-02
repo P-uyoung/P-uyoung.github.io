@@ -8,6 +8,10 @@ toc_sticky: true
 author_profile: false
 search: true
 use_math: true
+header:
+#   overlay_image: /assets/images/teaser/CT.webp
+#   overlay_filter: 0.5
+  teaser: /assets/images/teaser/CT.webp
 ---
 
 구분합/곱, 최솟값과 최댓값 구하기 문제에서 사용할 수 있는 알고리즘입니다.

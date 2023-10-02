@@ -8,6 +8,10 @@ toc_sticky: true
 author_profile: false
 search: true
 use_math: true
+header:
+#   overlay_image: /assets/images/teaser/CT.webp
+#   overlay_filter: 0.5
+  teaser: /assets/images/teaser/CT.webp
 ---
 
 이분탐색의 시간복잡도는 O(logN)입니다.   

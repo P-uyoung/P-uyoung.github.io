@@ -8,6 +8,10 @@ toc_sticky: true
 author_profile: false
 search: true
 use_math: true
+header:
+#   overlay_image: /assets/images/teaser/CT.webp
+#   overlay_filter: 0.5
+  teaser: /assets/images/teaser/CT.webp
 ---
 
 ### 소수(PrimeNumber)를 판별하는 방법(알고리즘) 3가지를 소개하겠습니다.  

@@ -7,7 +7,12 @@ toc_sticky: false
 author_profile: false
 search: true
 use_math: true
+header:
+#   overlay_image: 
+#   overlay_filter: 0.5 
+  teaser: /assets/images/teaser/clustering.png
 ---
+
 <br/>
 
 ## 결론 
