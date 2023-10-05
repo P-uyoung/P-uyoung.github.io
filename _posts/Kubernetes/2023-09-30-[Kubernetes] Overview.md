@@ -3,6 +3,7 @@ layout: single
 categories: MLOps
 toc: true
 toc_sticky: true
+tag: [Kubernetes]
 author_profile: false
 search: true
 header:
