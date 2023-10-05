@@ -34,6 +34,8 @@ categories:
       url : /categories/Machine_Learning/
     - title: "Computer_Vision"
       url: /categories/Computer_Vision/
+    - title: "MLOps"
+      url: /categories/MLOps/      
     - title: "Aivle"
       url: /categories/Aivle/
 
