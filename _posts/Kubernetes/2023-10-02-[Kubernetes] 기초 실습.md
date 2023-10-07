@@ -10,6 +10,8 @@ header:
   teaser: /assets/images/teaser/Kubernetes.webp
 ---
 
+환경 구축 및 기초 실습
+
 ## [1] Kubernetes Cluster 설치
 
 <img src="/assets/images/2023-10-02-Kubernetes/installation_process.png" /><br/>
