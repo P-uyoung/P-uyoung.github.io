@@ -7,7 +7,7 @@ tag: [Kubernetes]
 author_profile: false
 search: true
 header:
-  teaser: /assets/images/teaser/Kubernetes.webp
+  teaser: /assets/images/teaser/kubernetes.png
 ---
 
 ## 쿠버네티스의 필요성

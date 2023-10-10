@@ -7,7 +7,7 @@ tag: [Kubernetes]
 author_profile: false
 search: true
 header:
-  teaser: /assets/images/teaser/Kubernetes.webp
+  teaser: /assets/images/teaser/kubernetes.png
 ---
 
 환경 구축 및 기초 실습
