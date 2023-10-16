@@ -10,8 +10,8 @@ main:
   - title: "Search"
     url: /search/
 
-  - title: "GitHub"
-    url: https://github.com/p-uyoung
+  # - title: "GitHub"
+  #   url: https://github.com/p-uyoung
 
   # - title: "Projects"
   #   url: /projects/
