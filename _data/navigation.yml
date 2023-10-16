@@ -1,14 +1,14 @@
 # 참고 블로그 https://github.com/choiiis/choiiis.github.io
 # main links
 main:
+  - title: "About"
+    url: https://p-uyoung.github.io/about
+
   - title: "Home"
     url: https://p-uyoung.github.io/
 
-  - title: "search"
+  - title: "Search"
     url: /search/
-  
-  # - title: "About"  # 수정하고 곧 다시 활성화할 예정
-  #   url: https://www.notion.so/uyoung0/c440260dd1ea47b984540c324e3d7925
 
   - title: "GitHub"
     url: https://github.com/p-uyoung

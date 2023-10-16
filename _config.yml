@@ -95,12 +95,12 @@ analytics:
 
 # Site Author
 author:
-  name: "곰순이의 기술블로그"
-  avatar: "/assets/images/programmer.jpg"
-  bio              : "MS SNU expected in CEE 2023<br/>BS SSU in AE and CSE 2021"  
-  # location         : "Seoul, South Korea"
-  # email            : "uyoung@snu.ac.kr"
-  links:
+  # name: "곰순이의 기술블로그"
+  # avatar: "/assets/images/avatar.png"
+  # bio              : "MS SNU expected in CEE 2023<br/>BS SSU in AE and CSE 2021"  
+  # # location         : "Seoul, South Korea"
+  # # email            : "uyoung@snu.ac.kr"
+  # links:
 #     - label: "Email"
 #       icon: "fas fa-fw fa-envelope-square"
 #       # url: "mailto:your.name@email.com"
