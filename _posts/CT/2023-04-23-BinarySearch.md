@@ -102,7 +102,6 @@ def solution(n, times):
 ```
 <br/>
 
-
 #### 🍓 [3. 징검다리 건너기 (Lv.3)](https://school.programmers.co.kr/learn/courses/30/lessons/64062)
 
 - 문제 상황 : 니니지 친구들이 무제한으로 있을 때, 징검다리를 건널 수 있는 친구들의 최대 인원 수를 구하는 문제입니다.  징검다리 돌은 밟을 수 있는 숫자가 각각 정해져 있으며, 0이 되면 밝을 수 없고 다음 돌로 jump할 수 있습니다. jump 가능한 수는 k로 주어집니다.  
