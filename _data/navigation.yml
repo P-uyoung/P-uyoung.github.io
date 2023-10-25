@@ -37,7 +37,12 @@ categories:
     - title: "Aivle"
       url: /categories/Aivle/
   
-  - title: "Projects"
+  - title: "CS"
+    children:
+    - title: "Coding_Test"
+      url : /categories/Coding_Test/
+
+  - title: "Prj"
     children:
     - title: "Trouble_Shooting"
       url: /categories/Trouble_Shooting/
