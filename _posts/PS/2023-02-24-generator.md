@@ -1,7 +1,7 @@
 ---
 layout: single  
 title:  "제너레이터 (43163 단어 변환)"
-categories: 코테
+categories: PS
 # tag: [단어 변환]
 toc: true
 toc_sticky: true

@@ -1,7 +1,7 @@
 ---
 layout: single  
 title:  "(15) Segment Tree"
-categories: 코테
+categories: PS
 tag: [Segment Tree, 구분합]
 toc: true
 toc_sticky: true

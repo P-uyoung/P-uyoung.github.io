@@ -1,9 +1,9 @@
 ---
-title: "코테"
+title: "PS"
 layout: category
-permalink: /categories/코테/
+permalink: /categories/PS/
 author_profile: true
-taxonomy: 코테
+taxonomy: PS
 sidebar:
   nav: "categories"
 ---

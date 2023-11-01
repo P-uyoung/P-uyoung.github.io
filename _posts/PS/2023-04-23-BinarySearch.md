@@ -1,7 +1,7 @@
 ---
 layout: single  
 title:  "(14) BinarySearch"
-categories: 코테
+categories: PS
 tag: [Binary Search]
 toc: true
 toc_sticky: true

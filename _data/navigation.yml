@@ -39,8 +39,8 @@ categories:
   
   - title: "CS"
     children:
-    - title: "코테"
-      url : /categories/코테/
+    - title: "PS"
+      url : /categories/PS/
 
   - title: "LevelUp"
     children:
