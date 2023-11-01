@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: single  
 categories: k8s
 title: "[K8S] 오브젝트 기초 - Namespace"
@@ -9,7 +9,7 @@ author_profile: false
 search: true
 header:
   teaser: /assets/images/teaser/kubernetes.png
----
+--- -->
 
 Namespace, ResourceQuota, LimitRange
 
