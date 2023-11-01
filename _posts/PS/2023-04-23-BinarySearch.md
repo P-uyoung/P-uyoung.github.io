@@ -1,6 +1,6 @@
 ---
 layout: single  
-title:  "(14) BinarySearch"
+title:  "(10) BinarySearch"
 categories: PS
 tag: [Binary Search]
 toc: true
