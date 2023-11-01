@@ -1,10 +1,10 @@
 ---
 layout: single  
-categories: Kubernetes
+categories: k8s
 title: "[K8S] 오브젝트 기초 - ConfigMap, Secret"
 toc: true
 toc_sticky: true
-tag: [Kubernetes]
+tag: [k8s]
 author_profile: false
 search: true
 header:
@@ -42,7 +42,7 @@ pod의 환경변수로 연결될 때는 자동으로 decoding이 돼서 원래�
 
 
 또한, **<u>secret은 민감한 정보가 디스크에 기록되지 않도록 memory에 저장</u>**된다.   
-1. 생성 : Kubernetes 클러스터에서 configMap, secret 오브젝트를 생성    
+1. 생성 : k8s 클러스터에서 configMap, secret 오브젝트를 생성    
 2. 저장 : 이 오브젝트들을 kubernets DB(etcd)에 저장
 3. 파일로 매핑 : 쿠버네티스는 configMap 또는 secret 오브젝트의 데이터를 파일로 매핑. 
 이 매핑은 작업 노드의 파일 시스템에 일시적으로 저장된다. **<u><span style="color:#ff0000">Secret의 경우 인메모리 파일 시스템(tmpfs)에 저장</span></u>**될 수 있어 디스크에 민감한 데이터가 기록되지 않도록 보호된다.
@@ -70,7 +70,7 @@ pod의 환경변수로 연결될 때는 자동으로 decoding이 돼서 원래�
   - <u>Container Runtime</u>: 컨테이너를 실행하는 데 필요한 런타임으로, Docker, containerd, rkt 등이 있다.    
   - <u>Pods</u>: Pod는 하나 이상의 컨테이너와 그 컨테이너의 저장소 및 네트워크 리소스를 캡슐화합니다.    
 
-  kubectl : Kubernetes CLI
+  kubectl : k8s CLI
 
 ---
 

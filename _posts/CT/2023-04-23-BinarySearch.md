@@ -1,7 +1,7 @@
 ---
 layout: single  
 title:  "(14) BinarySearch"
-categories: Coding_Test
+categories: 코테
 tag: [Binary Search]
 toc: true
 toc_sticky: true

@@ -1,9 +1,9 @@
 ---
-title: "Kubernetes"
+title: "k8s"
 layout: category
-permalink: /categories/Kubernetes/
+permalink: /categories/k8s/
 author_profile: true
-taxonomy: Kubernetes
+taxonomy: k8s
 sidebar:
   nav: "categories"
 ---

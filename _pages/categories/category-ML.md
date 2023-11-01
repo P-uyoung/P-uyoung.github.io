@@ -1,9 +1,9 @@
 ---
-title: "CV"
+title: "ML"
 layout: category
-permalink: /categories/CV/
+permalink: /categories/ML/
 author_profile: true
-taxonomy: CV
+taxonomy: ML
 sidebar:
   nav: "categories"
 ---

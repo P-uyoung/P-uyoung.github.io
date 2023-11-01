@@ -25,26 +25,26 @@ categories:
 
   - title: "MLOps"
     children:
-    - title: "Kubernetes"
-      url: /categories/Kubernetes/
+    - title: "k8s"
+      url: /categories/k8s/
 
   - title: "AI"
     children:
-    - title: "Machine_Learning"
-      url : /categories/Machine_Learning/
-    - title: "Computer_Vision"
-      url: /categories/Computer_Vision/ 
+    - title: "ML"
+      url : /categories/ML/
+    - title: "CV"
+      url: /categories/CV/ 
     - title: "Aivle"
       url: /categories/Aivle/
   
   - title: "CS"
     children:
-    - title: "Coding_Test"
-      url : /categories/Coding_Test/
+    - title: "코테"
+      url : /categories/코테/
 
-  - title: "Prj"
+  - title: "LevelUp"
     children:
-    - title: "Trouble_Shooting"
-      url: /categories/Trouble_Shooting/
-    # - title: "Domain"
-    #   url: /categories/Domain/
+    - title: "자격증"
+      url: /categories/자격증/
+    - title: "개발 도서"
+      url: /categories/개발 도서/

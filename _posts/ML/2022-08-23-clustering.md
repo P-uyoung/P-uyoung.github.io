@@ -1,7 +1,7 @@
 ---
 layout: single  # single, 댓글기능을 달기 위해...
 title:  "PCA 와 K-means Clustering 의 관계"
-categories: Machine_Learning
+categories: ML
 toc: true
 toc_sticky: false
 author_profile: false

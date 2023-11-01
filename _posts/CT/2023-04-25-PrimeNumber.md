@@ -1,7 +1,7 @@
 ---
 layout: single  
 title:  "소수 판별 (O(n), O(root(n)), O(nlogn))"
-categories: Coding_Test
+categories: 코테
 tag: [에라토스테네스의 체]
 toc: true
 toc_sticky: true

@@ -1,7 +1,7 @@
 ---
 layout: single  
 title:  "RuntimeError"
-categories: Coding_Test
+categories: 코테
 # tag: [Error]
 toc: true
 toc_sticky: true

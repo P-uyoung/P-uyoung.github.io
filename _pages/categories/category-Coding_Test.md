@@ -1,9 +1,9 @@
 ---
-title: "Coding_Test"
+title: "코테"
 layout: category
-permalink: /categories/Coding_Test/
+permalink: /categories/코테/
 author_profile: true
-taxonomy: Coding_Test
+taxonomy: 코테
 sidebar:
   nav: "categories"
 ---
