@@ -97,7 +97,7 @@ def solution(n, times):
             left = mid + 1
 
     # If no exact match is found, return the saved result or the left value
-    return answer if answer else right
+    return answer if answer else left
 
 ```
 <br/>
