@@ -1,7 +1,7 @@
 ---
 layout: single  
 categories: k8s
-title: "[K8S] 오브젝트 기초 - Namespace"
+title: "[Xshell] 오브젝트 - Namespace"
 toc: true
 toc_sticky: true
 tag: [k8s]
@@ -19,11 +19,13 @@ Namespace, ResourceQuota, LimitRange
 
 ## 필요성
 
-쿠버네티스 클러스터에서 사용할 수 있는 자원인 메모리와 CPU가 한정이 되어있다.
+**<u>쿠버네티스 클러스터에서 사용할 수 있는 자원인 메모리와 CPU가 한정이 되어있다.</u>**
+
+쿠버네티스 클러스터 내의 리소스를 격리하는 데 사용한다. 
 
 클러스터 안에는 여러 namespace를 만들 수 있고, 그 안에 여러 pod들을 만들 수 있다. 
 
-각 pod는 필요한 자원을 클러스터의 자원을 공유해서 사용하는데 이때 특정 네임 스페이스나 pod에서 클러스터의 자원은 모두 사용해버리면 다른 pod 들은 자원을 사용하지 못하는 문제가 발생한다.
+**<u>각 pod는 필요한 자원을 클러스터의 자원을 공유해서 사용하는데 이때 특정 네임 스페이스나 pod에서 클러스터의 자원은 모두 사용해버리면 다른 pod 들은 자원을 사용하지 못하는 문제가 발생한다.</u>**
 
 이러한 문제를 해결하기 위해서 ResourceQuota, LimitRange가 존재한다.
 
@@ -57,12 +59,12 @@ Cluster 안에 Node, Node안에 Pod 이렇게 공부했는데 NameSpace는 어�
 (2) nameSpace 기반 스코핑은 nameSpace 기반 오브젝트 (예: 디플로이먼트, 서비스 등) 에만 적용 가능하며 클러스터 범위의 오브젝트 (예: 스토리지클래스, 노드, 퍼시스턴트볼륨 등) 에는 적용 불가능하다.
 
 
-### 특징 (1): 같은 타입의 오브젝트명은 유일해야 한다.
+### 특징 (1) 같은 타입의 오브젝트명은 유일해야 한다.
 
 한 nameSpace 안에는 같은 type의 오브젝트들은 이름이 중복될 수 없다.   
 오브젝트마다 별도의 UUID가 존재하지만, 한 nameSpace 안에서는 같은 종류의 오브젝트라면 이름 또한 UUID 같이 유일한 키 역할을 할 수 있는 셈이다.
 
-### 특징 (2): 다른 nameSpace간에는 pod와 service 연결이 불가능하다.
+### 특징 (2) 다른 nameSpace간에는 pod와 service 연결이 불가능하다.
 
 Pod와 Service와 연결할 때, pod에는 label을 달고 service에는 selector를 달아서 연결한다.
 
@@ -83,6 +85,8 @@ NameSpace의 특징을 정리한 그림은 아래와 같다.
 <img src="/assets/images/2023-10-13-k8s/img1.png" /><br/>
 
 ### 실습
+
+#### 실습1: 같은 타입의 오브젝트명은 유일해야 한다.
 
 nameSpace1에 pod와 service를 만든다.
 
@@ -112,6 +116,8 @@ spec:
     - containerPort: 8080
 ```
 
+pod를 만들 때 namespace를 지정하지 않아도 데시보드상에서 nm-1로 지정하고 만들면 자동으로 해당 namespace 안에 만들어진다. 
+
 - service 
 
 ```yaml
@@ -128,15 +134,47 @@ spec:
     targetPort: 8080
 ```
 
-nameSpace2에 pod와 service를 만든다.
+pod ip : 20.111.156.85
+
+service ip : 10.105.1.19
+
+#### 실습2: 오브젝트간의 연결은 같은 namespace 안에서만 가능
+
+그 다음으로, 새로운 namespace를 만들고 svc-2를 만들어보자. 아까 만든 pod는 nameSpace2에서 연결이 안된다.
 
 - nameSpace
+
 ```yaml
 apiVersion: v1
 kind: Namespace
 metadata:
   name: nm-2
 ```
+
+- service
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-2
+spec:
+  selector:
+    app: pod
+  ports:
+  - port: 9000
+    targetPort: 8080
+```
+<img src="/assets/images/2023-10-13-k8s/dash1.png" width="450"/><br/>
+
+---
+
+#### 실습3: namespace로 분리가 안되는 경우
+
+##### <u>1. IP 접근</u>
+
+namespace2에서 pod를 만들고, namespace1의 pod와 service에 연결해보자.
+
 - pod
 
 ```yaml
@@ -150,13 +188,57 @@ metadata:
 spec:
   containers:
   - name: container
-    image: kubetm/init
+    image: kubetm/app
     ports:
     - containerPort: 8080
 ```
+대시보드에서 pod의 셀에 진입하여 아래와 같이 명령어를 실행하면 다른 namespace의 pod에 연결이 된다.
+
+```bash
+/# curl <pod ip>:8080/hostname
+```
+<img src="/assets/images/2023-10-13-k8s/dash2.png"/><br/>
 
 
----
+- service
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-2
+spec:
+  selector:
+    app: pod
+  ports:
+  - port: 9000
+    targetPort: 8080
+```
+
+```bash
+/# curl <service ip>:8080/hostname
+```
+<img src="/assets/images/2023-10-13-k8s/dash3.png"/><br/>
+
+
+**<u><span style="color:#ff0000">namespace가 IP 트래픽을 막아주지 않는다. network policy 오브젝트가 그 역할을 한다.</span></u>**
+
+<br>
+
+**\*curl 설치**
+
+해당 pod가 데비안이여서 curl을 설치해야한다.
+
+*<u>cat /etc/*release*</u>*  &nbsp;&nbsp;&nbsp;&nbsp; : 해당 os에 대한 정보를 파악     
+*<u>echo "nameserver 8.8.8.8" > /etc/resolv.conf</u>*  &nbsp;&nbsp;&nbsp;&nbsp; : 어떤 문제로 DNS 서버에 도달할 수 없다. 외부 DNS 서버를 사용하기 위함. (DNS 서버의 역할은 도메인 이름을 파드의 IP 주소로 해석하여 통신을 가능하게 함.)      
+curl 설치 :     
+*<u>apt update</u>*      
+*<u>apt upgrade</u>*      
+*<u>apt install curl</u>*     
+
+<br>
+
+##### <u>2. NodePort 접근</u>
 
 ## [2] ResourceQuota
 

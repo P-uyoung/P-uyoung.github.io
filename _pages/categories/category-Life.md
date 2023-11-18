@@ -1,9 +1,9 @@
 ---
-title: "MLOps"
+title: "Life"
 layout: category
-permalink: /categories/MLOps/
+permalink: /categories/Life/
 author_profile: true
-taxonomy: MLOps
+taxonomy: Life
 sidebar:
   nav: "categories"
 ---

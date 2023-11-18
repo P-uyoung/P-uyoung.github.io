@@ -1,7 +1,7 @@
 ---
 layout: single  
 categories: k8s
-title: "[K8S] 오브젝트 기초 - ConfigMap, Secret"
+title: "[Xshell] 오브젝트 - ConfigMap, Secret"
 toc: true
 toc_sticky: true
 tag: [k8s]
@@ -65,12 +65,12 @@ pod의 환경변수로 연결될 때는 자동으로 decoding이 돼서 원래�
     - <u>etcd</u>: 쿠버네티스의 중앙데이터베이스로 클러스터의 모든 구성 데이터를 저장하는 분산 키-값 저장소이다.    
 
 - **Worker Node (컴퓨팅 작업을 수행하는 노드)**:
-  - <u>Kubelet</u>: 각 Worker Node에서 실행되는 에이전트로, 해당 노드에서 실행되는 Pod의 상태를 모니터링하고 관리한다.   
+  - <u>Kubelet (k8s CLI)</u>: 각 Worker Node에서 실행되는 에이전트로, 해당 노드에서 실행되는 Pod의 상태를 모니터링하고 관리한다.   
   - <u>Kube Proxy (kube-proxy)</u>: 네트워크 프록시 및 로드 밸런싱을 제공하여 Pod 간의 네트워크 통신을 가능하게 한다.  
   - <u>Container Runtime</u>: 컨테이너를 실행하는 데 필요한 런타임으로, Docker, containerd, rkt 등이 있다.    
   - <u>Pods</u>: Pod는 하나 이상의 컨테이너와 그 컨테이너의 저장소 및 네트워크 리소스를 캡슐화합니다.    
 
-  kubectl : k8s CLI
+<img src="/assets/images/2023-10-12-k8s/architecture1.png" width="550"/><br/>
 
 ---
 

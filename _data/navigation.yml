@@ -1,8 +1,8 @@
 # 참고 블로그 https://github.com/choiiis/choiiis.github.io
 # main links
 main:
-  - title: "About"
-    url: https://p-uyoung.github.io/home
+  # - title: "About"
+  #   url: https://p-uyoung.github.io/home
 
   - title: "Home"
     url: https://p-uyoung.github.io/
@@ -23,10 +23,12 @@ main:
 # 2022.02.15 sidebar update : simple ver.
 categories:
 
-  - title: "MLOps"
+  - title: "DevOps"
     children:
     - title: "k8s"
       url: /categories/k8s/
+    - title: "Spark"
+      url: /categories/Spark/
 
   - title: "AI"
     children:
@@ -42,9 +44,11 @@ categories:
     - title: "PS"
       url : /categories/PS/
 
-  - title: "LevelUp"
+  - title: "Life"
     children:
+    - title: "합격후기"
+      url: /categories/합격후기/
     - title: "자격증"
       url: /categories/자격증/
-    - title: "개발 도서"
-      url: /categories/개발 도서/
+    - title: "개발서"
+      url: /categories/개발서/
