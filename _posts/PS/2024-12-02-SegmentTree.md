@@ -1,6 +1,6 @@
 ---
 layout: single  
-title:  "(12) Fenwik"
+title:  "(14) Segment Tree"
 categories: PS
 tag: [Segment Tree, 구분합]
 toc: true
