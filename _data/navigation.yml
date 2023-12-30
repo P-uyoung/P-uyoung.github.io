@@ -38,6 +38,11 @@ categories:
       url: /categories/CV/ 
     - title: "Aivle"
       url: /categories/Aivle/
+
+  - title: "BE"
+    children:
+    - title: "Django"
+      url : /categories/Django/
   
   - title: "CS"
     children:
