@@ -51,9 +51,7 @@ categories:
 
   - title: "Life"
     children:
-    - title: "합격후기"
-      url: /categories/합격후기/
     - title: "자격증"
       url: /categories/자격증/
-    - title: "개발서"
-      url: /categories/개발서/
+    - title: "개발도서"
+      url: /categories/개발도서/

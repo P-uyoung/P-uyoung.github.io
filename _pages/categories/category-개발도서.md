@@ -1,9 +1,9 @@
 ---
-title: "개발 도서"
+title: "개발도서"
 layout: category
-permalink: /categories/개발 도서/
+permalink: /categories/개발도서/
 author_profile: true
-taxonomy: 개발 도서
+taxonomy: 개발도서
 sidebar:
   nav: "categories"
 ---
